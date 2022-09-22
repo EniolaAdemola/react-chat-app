@@ -1,0 +1,78 @@
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+ *,
+ *::before,
+ *::after {
+     margin: 0;
+     padding: 0;
+    //  border: 0;
+     outline: 0;
+     list-style: none;
+     text-decoration: none;
+     box-sizing: border-box;
+ }
+
+ /******************** SCSS Variables ********************/
+$color-primary: hsl(var(--primary-hue), 100%, 50%);
+$color-white: #fff;
+$color-light: rgba(255, 255, 255, 0.6);$color-gray-100: hsl(var(--gray-hue), 47%, 94%);
+$container-width-lg:80%;
+$container-width-md:90%;
+
+$transition: all 500ms ease;
+
+ /******************** GENERAL STYLES ********************/
+.btn {
+    // color: var(--color-gray-100);
+    width: fit-content;
+    margin: 0 auto;
+    padding: 0.9rem 2rem;
+    // background: var(--color-primary);
+    border-radius: 1.5rem;
+    transition: var($transition);
+
+    .lg{
+        padding: 1.2rem 3rem;
+        border-radius: 2rem;
+        font-size: 1.1rem;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2;
+}
+
+h1 {
+    color: $color-white;
+    font-size: 3rem;
+}
+
+.text-light {
+    color: $color-light;
+}
+
+
+
+
+
+  /**************** SECTION REUSABLE STYLES ****************/
+
+
+
+
+
+
+
+   /************** MEDIA QURIES (medium screens) **************/
+@media screen and (max-width: 1024px){
+    .container {
+        width: $container-width-md;
+    }
+}
+
+
+
+
+   /***************** MEDIA QURIES (small screens) ****************/
+   @media screen and (max-width: 600px) {
+       
+   }
