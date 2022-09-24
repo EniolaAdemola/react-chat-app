@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useStateContext } from "../../contexts/ContextProvider";
 import "./register.scss";
+import AddImg from "../../assets/images/addAvatar.png";
 
 const Register = () => {
 	const { handleChange, signUp } = useStateContext();
@@ -47,13 +48,17 @@ const Register = () => {
 						autoComplete="off"
 						required
 					/>
-					<input type="file" />
+					<input style={{ display: "none" }} type="file" id="file" />
+					<label htmlFor="file" style={{ color: "#a7bcff" }}>
+						<img src={AddImg} alt="uploadImage" />
+						<span>Add your avatar</span>
+					</label>
 					<button type="button" style={{ backgroundColor: "#a7bcff" }}>
 						Register
 					</button>
 				</form>
-				<p>
-					Already have an account? <Link to="/login">Log in</Link>
+				<p style={{ color: "#a7bcff" }}>
+					Already have an account? <Link to="/login">Sign in</Link>
 				</p>
 			</div>
 		</div>
