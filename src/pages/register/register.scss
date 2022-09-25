@@ -1,3 +1,5 @@
+ @use "../../index" as v;
+ 
 .register__container {
     height: 100vh;
     display: flex;
@@ -10,7 +12,7 @@
     }
 
     p {
-        color: rgb(220, 220, 220);
+        color: v.$color-light;
     }
 
     .from__wrapper {
@@ -71,7 +73,7 @@
             }
 
             button:hover {
-            color: rgb(210, 209, 209);
+            color: v.$color-light;
             }
         }
     }
