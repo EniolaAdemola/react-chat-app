@@ -1,0 +1,52 @@
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../../assets/images/eniola.png);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-attachment: fixed;
+
+    .main__header{
+      margin: auto;
+      padding: 10px;
+    }
+
+    .main__header-container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        top: 40%;
+
+        h1,
+        h3 {
+            text-align: center;
+        }
+
+        h3 {
+            margin: 1.3rem;
+        }
+
+        .page__link {
+            display: flex;
+            margin-top: 4rem;
+        }
+    }
+
+
+}
+
+// @media only screen and (max-width: 1200px) {
+//     .hero-text-box {
+//         width: 100%;
+//         padding: 0 3%;
+//     }
+// }
+
+// @media only screen and (max-width: 480px) {
+//     .hero-text-box {
+//         padding: 0 4%;
+//     }
+// }
+
+
