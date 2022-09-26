@@ -4,22 +4,27 @@
  *::after {
      margin: 0;
      padding: 0;
-    //  border: 0;
+     border: 0;
      outline: 0;
      list-style: none;
      text-decoration: none;
      box-sizing: border-box;
  }
 
- /******************** SCSS Variables ********************/
-$color-primary: hsl(var(--primary-hue), 100%, 50%);
-$color-white: #fff;
-$color-light: rgba(255, 255, 255, 0.6);$color-gray-100: hsl(var(--gray-hue), 47%, 94%);
-$container-width-lg:80%;
-$container-width-md:90%;
-
-$transition: all 500ms ease;
-
+ 
+ /******************** SCSS Global Variables ********************/
+ $color-primary: hsl(var(--primary-hue), 100%, 50%);
+ $color-white: #fff;
+ $color-light: rgba(255, 255, 255, 0.6);$color-gray-100: hsl(var(--gray-hue), 47%, 94%);
+ $color-gray: grey;
+ $color-bg1: #3e3c61;
+ $color-bg2: #2f2d52;
+ $color-bg3: #5d5b8d;
+ $container-width-lg:80%;
+ $container-width-md:90%;
+ 
+ $transition: all 500ms ease;
+ 
  /******************** GENERAL STYLES ********************/
 .btn {
     // color: var(--color-gray-100);
@@ -50,9 +55,9 @@ h1 {
     color: $color-light;
 }
 
-
-
-
+::-webkit-scrollbar {
+    display: none;
+}
 
   /**************** SECTION REUSABLE STYLES ****************/
 
@@ -61,18 +66,17 @@ h1 {
 
 
 
-
    /************** MEDIA QURIES (medium screens) **************/
 @media screen and (max-width: 1024px){
-    .container {
-        width: $container-width-md;
-    }
+    // .container {
+    //     width: $container-width-md;
+    // }
 }
 
 
 
 
-   /***************** MEDIA QURIES (small screens) ****************/
-   @media screen and (max-width: 600px) {
-       
-   }
+/***************** MEDIA QURIES (small screens) ****************/
+@media screen and (max-width: 600px) {
+    
+}
