@@ -17,7 +17,9 @@ export const ContextProvider = ({ children }) => {
 			console.log(user);
 		});
 
-		return unsub();
+		return () => {
+			unsub();
+		};
 	}, []);
 
 	const handleChange = (event) => {
