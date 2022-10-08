@@ -1,16 +1,38 @@
-import React from "react";
-import eniola from "../assets/images/eniola.png";
+import React, { useContext } from "react";
+import { useEffect } from "react";
+import { useRef } from "react";
+import { ChatContext } from "../contexts/ChatContext";
+import { StateContext } from "../contexts/ContextProvider";
 
-const Message = () => {
+const Message = ({ message }) => {
+	const { currentUser } = useContext(StateContext);
+	const { data } = useContext(ChatContext);
+
+	const ref = useRef();
+
+	useEffect(() => {
+		ref.current?.scrollIntoView({ behaviour: "amooth" });
+	}, [message]);
+
 	return (
-		<div className="message owner">
+		<div
+			ref={ref}
+			className={`message ${message.senderId === currentUser.uid && "owner"}`}
+		>
 			<div className="message__info">
-				<img src={eniola} alt="" />
+				<img
+					src={
+						message.senderId === currentUser.uid
+							? currentUser.photoURL
+							: data.user.photoURL
+					}
+					alt=""
+				/>
 				<span>Just now</span>
 			</div>
 			<div className="message__content">
-				<p>Hello</p>
-				<img src={eniola} alt="" />
+				<p>{message.text}</p>
+				{message.pic && <img src={message.pic} alt="" />}
 			</div>
 		</div>
 	);
