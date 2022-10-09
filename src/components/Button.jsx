@@ -4,8 +4,12 @@ import { Link } from "react-router-dom";
 const Button = ({ bgColor, text, link }) => {
 	return (
 		<div>
-			<Link to={link} className="btn lg">
-				<button type="button" style={{ backgroundColor: bgColor }}>
+			<Link to={link}>
+				<button
+					type="button"
+					className="btn"
+					style={{ backgroundColor: bgColor }}
+				>
 					{text}
 				</button>
 			</Link>
