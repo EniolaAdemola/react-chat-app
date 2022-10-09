@@ -25,22 +25,7 @@
  
  $transition: all 500ms ease;
  
- /******************** GENERAL STYLES ********************/
-.btn {
-    // color: var(--color-gray-100);
-    width: fit-content;
-    margin: 0 auto;
-    padding: 0.9rem 2rem;
-    // background: var(--color-primary);
-    border-radius: 1.5rem;
-    transition: var($transition);
-
-    .lg{
-        padding: 1.2rem 3rem;
-        border-radius: 2rem;
-        font-size: 1.1rem;
-    }
-}
+ /**************** SECTION REUSABLE STYLES ****************/
 
 h1, h2, h3, h4, h5, h6 {
     line-height: 1.2;
@@ -52,31 +37,10 @@ h1 {
 }
 
 .text-light {
+    font-size: 1.5rem;
     color: $color-light;
 }
 
 ::-webkit-scrollbar {
     display: none;
-}
-
-  /**************** SECTION REUSABLE STYLES ****************/
-
-
-
-
-
-
-   /************** MEDIA QURIES (medium screens) **************/
-@media screen and (max-width: 1024px){
-    // .container {
-    //     width: $container-width-md;
-    // }
-}
-
-
-
-
-/***************** MEDIA QURIES (small screens) ****************/
-@media screen and (max-width: 600px) {
-    
 }
