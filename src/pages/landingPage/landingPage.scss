@@ -1,3 +1,5 @@
+ @use "../../index" as v;
+
 header {
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../../assets/images/eniola.png);
     background-size: cover;
@@ -29,24 +31,26 @@ header {
 
         .page__link {
             display: flex;
-            margin-top: 4rem;
+            gap: 1.5rem;
+            margin: 3rem;
+
+            .btn {
+                display: inline-block;
+                width: max-content;
+                margin: 0 auto;
+                padding: 0.9rem 2rem;
+                border-radius: 0.9rem;
+                transition: v.$transition;
+        
+                .btn:hover {
+                    background: v.$color-white;
+                    color: v.$color-gray;
+                    border-color: transparent;
+                }
+            }
         }
     }
 
 
 }
-
-// @media only screen and (max-width: 1200px) {
-//     .hero-text-box {
-//         width: 100%;
-//         padding: 0 3%;
-//     }
-// }
-
-// @media only screen and (max-width: 480px) {
-//     .hero-text-box {
-//         padding: 0 4%;
-//     }
-// }
-
 
